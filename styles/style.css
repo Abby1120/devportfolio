@@ -211,7 +211,8 @@ header .title .magellan .buttonnav:hover {
   text-align: center;
 }
 
-p {
+.mobile-p {
+  padding: 0 2%;
   font-family: "Lora", serif;
   color: #f0ebeb;
   font-size: 1.3em;

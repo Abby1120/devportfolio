@@ -170,7 +170,8 @@ header {
 }
 
 // Mobile Header Paragraph
-p {
+.mobile-p {
+  padding: 0 2%;
   font-family: $font2;
   color: rgb(240, 235, 235);
   font-size: 1.3em;
@@ -316,7 +317,7 @@ p {
   background-color: #fff;
   color: black;
   box-shadow: 8px 8px 10px rgba(24, 27, 25, 0.726);
-  font-family: $font1; 
+  font-family: $font1;
   transform: rotateY(180deg);
   p {
     padding: 1% 8% 0 8%;
@@ -360,7 +361,6 @@ p {
       }
     }
 }
-
 
 // About Me
 #about {
