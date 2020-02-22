@@ -167,7 +167,7 @@ header .title .magellan .buttonnav:hover {
   z-index: 1;
   width: 100%;
   margin: auto;
-  padding-top: 30%;
+  padding-top: 20%;
 }
 
 @media (max-width: 600px) {
