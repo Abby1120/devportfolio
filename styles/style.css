@@ -167,7 +167,7 @@ header .title .magellan .buttonnav:hover {
   z-index: 1;
   width: 100%;
   margin: auto;
-  padding-top: 40%;
+  padding-top: 30%;
 }
 
 @media (max-width: 600px) {
@@ -179,16 +179,16 @@ header .title .magellan .buttonnav:hover {
 }
 
 .title-mobile .circle {
-  height: 15em;
-  width: 15em;
+  height: 16em;
+  width: 16em;
   background-color: #cecac3;
   border-radius: 50%;
 }
 
 .title-mobile .inner-circle {
   z-index: 1;
-  height: 13em;
-  width: 13em;
+  height: 14em;
+  width: 14em;
   background-color: #cecac3;
   border-radius: 50%;
   margin: 6%;
@@ -203,7 +203,7 @@ header .title .magellan .buttonnav:hover {
   text-align: center;
 }
 
-.title-mobile h2 {
+.title-mobile h3 {
   margin: 0;
   color: #43be4e;
   font-family: "Open Sans", sans-serif;
@@ -212,7 +212,7 @@ header .title .magellan .buttonnav:hover {
 }
 
 .mobile-p {
-  padding: 0 2%;
+  margin: 5%;
   font-family: "Lora", serif;
   color: #f0ebeb;
   font-size: 1.3em;
@@ -268,7 +268,7 @@ header .title .magellan .buttonnav:hover {
 
 #projects h2 {
   margin: 0;
-  padding-top: 3%;
+  padding-top: 2%;
   font-family: "Lora", serif;
   font-size: 2.2em;
   letter-spacing: 1px;
@@ -387,15 +387,15 @@ header .title .magellan .buttonnav:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
-  font-size: 2em;
+  width: 100%;
+  font-size: 1.8em;
   -webkit-transform: translateZ(50px) scale(0.97);
           transform: translateZ(50px) scale(0.97);
   text-shadow: 7px 7px 5px #161816;
 }
 
 .front .icons a {
-  padding: 0 3%;
+  padding: 0 2%;
   color: white;
 }
 
@@ -451,8 +451,8 @@ header .title .magellan .buttonnav:hover {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   cursor: pointer;
-  -webkit-transform: translateZ(40px) scale(0.95);
-          transform: translateZ(40px) scale(0.95);
+  -webkit-transform: translateZ(50px) scale(0.95);
+          transform: translateZ(50px) scale(0.95);
 }
 
 .button:hover {

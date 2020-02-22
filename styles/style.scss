@@ -137,17 +137,17 @@ header {
   z-index: 1;
   width: 100%;
   margin: auto;
-  padding-top: 40%;
+  padding-top: 30%;
   .circle {
-    height: 15em;
-    width: 15em;
+    height: 16em;
+    width: 16em;
     background-color: $light-gray;
     border-radius: 50%; 
   }
   .inner-circle {
     z-index: 1;
-    height: 13em;
-    width: 13em; 
+    height: 14em;
+    width: 14em; 
     background-color: $light-gray;
     border-radius: 50%;
     margin: 6%;
@@ -160,7 +160,7 @@ header {
     text-shadow: 1px 1px black;
     text-align: center;
   }
-  h2{
+  h3{
     margin: 0;
     color: $green;
     font-family: $font1;
@@ -171,7 +171,7 @@ header {
 
 // Mobile Header Paragraph
 .mobile-p {
-  padding: 0 2%;
+  margin: 5%;
   font-family: $font2;
   color: rgb(240, 235, 235);
   font-size: 1.3em;
@@ -215,7 +215,7 @@ header {
   padding-bottom: 2%;
   h2 {
     margin: 0;
-    padding-top: 3%;
+    padding-top: 2%;
     font-family: $font2;
     font-size: 2.2em;
     letter-spacing: 1px;
@@ -292,12 +292,12 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 90%;
-    font-size: 2em;
+    width: 100%;
+    font-size: 1.8em;
     transform: translateZ(50px) scale(0.97);
     text-shadow: 7px 7px 5px $shadow;
     a {
-      padding: 0 3%;
+      padding: 0 2%;
       color: white;
       .fas:hover {
         transition: .3s ease-in-out;
@@ -339,7 +339,7 @@ header {
   transition: .3s ease-in-out;
   backface-visibility: hidden;
   cursor: pointer;
-  transform: translateZ(40px) scale(0.95);
+  transform: translateZ(50px) scale(0.95);
     &:hover {
       background-color: white;
       color: black;
