@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400italic|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <script src="https://kit.fontawesome.com/b90b1e2c54.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+ 
+  <!-- Hero image with name and navbar centered using flexbox -->
+  <div class="title-mobile">
+    <div class="circle">
+      <div class="inner-circle">
+        <h1>Abigail Gulla</h1>
+        <h2>Web Developer</h2>
+        </div>
+    </div>
+    <p>Professional with over three years of coding experience
+       seeking a position to solve user problems and enhance
+       programming skills.
+    </p>
+  </div>
+  <header id="home">
+
+   
+    <div class="title">
+      <h1>Abigail Gulla</h1>
+      <p>Web Developer</p>
+      <div class="nav-icons">
+        <a href="http://www.linkedin.com/in/abigail-gulla" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Abby1120" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.freecodecamp.org/abigailg" target="_blank"><i class="fab fa-free-code-camp"></i></a>
+        <a href="https://codepen.io/abigailgulla" target="_blank"><i class="fab fa-codepen"></i></a>
+      </div>
+      <nav class="magellan">
+          <a href="#projects" class="buttonnav">PROJECTS</a>
+          <a href="#about" class="buttonnav">ABOUT</a>
+          <a href="#contact" id="myBtn" class="buttonnav">CONTACT</a>
+          <a class="buttonnav" href="Web Resume.pdf" target="_blank">R&Eacute;SUM&Eacute;</a>
+      </nav>
+    </div>
+    <div class="header-text">
+  
+    </div>
+  </header> 
+  <div class="icon-bar">
+    <a class="active" href="#home"><i class="fas fa-home"></i><span>HOME</span></a>
+    <a href="#projects"><i class="fas fa-tools"></i><span>PROJECTS</span></a>
+    <a href="#about"><i class="fas fa-book"></i><span>ABOUT</span></a>
+    <a href="#contact"><i class="fas fa-envelope"></i><span>CONTACT</span></a>
+    <a href="Web Resume.pdf" target="_blank"><i class="fas fa-file-pdf"></i><span>RESUME</span></a>
+  </div>
+
+    <!-- Projects Section -->
+    
+  <section id="projects">  
+    <h2>PROJECTS</h2>
+    <!-- Projects Flexbox Wrapper -->
+    <div class="projects">
+      <!-- Card 1 -->
+      <div class="card">
+        <input type="checkbox" id="card1" class="more" aria-hidden="true">
+        <div class="content">
+          <div class="front">
+            <img src="/images/sports.png" alt="API Project">
+            <h1>The Sports List</h1>
+            <div class="icons">
+              <a><i class="fab fa-js"></i></a>
+              <a><i class="fab fa-css3"></i></a>
+              <a href="https://abby1120.github.io/sportlist/" target="_blank"><i class="fas fa-desktop" title="LIVE"></i></a>
+              <a href="https://github.com/Abby1120/sportlist" target="_blank"><i class="fas fa-file-code" title="CODE"></i></a>
+            </div>
+            <label for="card1" class="button" aria-hidden="true">
+                DESCRIPTION
+            </label>
+          </div>
+          <div class="back">
+            <p>Used a GET request to pull data from the SportsDB REST API 
+               in order to display it on the page. I looped
+               through the data to form each card utilizing Template Literals in 
+               JavaScript.
+            </p>
+            <label for="card1" class="button return" aria-hidden="true">
+                <i class="fas fa-arrow-left"></i>
+            </label>
+          </div>
+      </div>
+  </div>
+    <!-- Card 2 -->
+  <div class="card">
+      <input type="checkbox" id="card2" class="more" aria-hidden="true">
+      <div class="content">
+        <div class="front">
+          <img src="/images/cupfindrhero.png" alt="API Project">
+          <h1>Coffee App</h1>
+          <div class="icons">
+            <a><i class="devicon-mongodb-plain"></i></a>
+            <a><i class="devicon-express-original"></i></a>
+            <a><i class="fab fa-angular"></i></a>
+            <a><i class="fab fa-node"></i></a>
+            <a href="https://abby1120.github.io/appcoffee/signin.html" target="_blank"><i class="fas fa-desktop" title="LIVE"></i></a>
+            <a href="https://github.com/Abby1120/appcoffee" target="_blank"><i class="fas fa-file-code" title="CODE"></i></a>
+          </div>
+          <label for="card2" class="button" aria-hidden="true">
+             DESCRIPTION
+          </label>
+        </div>
+        <div class="back">
+          <p>Created an API where coffee roasters and shops can use CRUD operations to interact
+             with the Mongo database to maintain their coffee roast's tasting profiles. Consumers of
+             coffee can put in a form the tasting profiles they prefer in coffee to GET
+             a list of coffee they will like. The ReadMe file on GitHub gives a full description of
+             the purpose of this project.
+          </p> 
+          <label for="card2" class="button return" aria-hidden="true">
+            <i class="fas fa-arrow-left"></i>
+          </label>
+        </div>
+    </div>
+ </div>
+<!-- Card 3 -->
+ <div class="card">
+    <input type="checkbox" id="card3" class="more" aria-hidden="true">
+    <div class="content">
+      <div class="front">
+        <img src="/images/msfc.png" alt="API Project">
+        <h1>The Magic Spoon</h1>
+        <div class="icons">
+          <a><i class="fab fa-html5"></i></a>
+          <a><i class="fab fa-js"></i></a>
+          <a><i class="fab fa-css3"></i></a>
+          <a href="https://magicspoon.netlify.com/" target="_blank"><i class="fas fa-desktop" title="LIVE"></i></a>
+          <a href="https://github.com/Abby1120/restaurantsite" target="_blank"><i class="fas fa-file-code" title="CODE"></i></a>
+        </div>
+        <label for="card3" class="button" aria-hidden="true">
+           DESCRIPTION
+        </label>
+      </div>
+      <div class="back">
+        <p>A responsive, one-page, easy to navigate restaurant website built with
+           JavaScript, CSS and HTML. The owner had a design in mind so I did what
+           I could with it and updated it as much as possible with some of the legacy
+           features he had in mind. 
+        </p>
+        <label for="card3" class="button return" aria-hidden="true">
+            <i class="fas fa-arrow-left"></i>
+        </label>
+      </div>
+    </div>
+ </div>
+<!-- Card 4 -->
+ <div class="card">
+  <input type="checkbox" id="card4" class="more" aria-hidden="true">
+  <div class="content">
+    <div class="front">
+      <img src="/images/gquiz.png" alt="API Project">
+      <h1>Geography Quiz</h1>
+      <div class="icons">
+        <a><i class="fab fa-html5"></i></a>
+        <a><i class="fab fa-js"></i></a>
+        <a><i class="fab fa-css3"></i></a>
+        <a href="https://abby1120.github.io/geographyquiz/" target="_blank"><i class="fas fa-desktop" title="LIVE"></i></a>
+        <a href="https://github.com/Abby1120/geographyquiz" target="_blank"><i class="fas fa-file-code" title="CODE"></i></a>
+      </div>
+      <label for="card4" class="button" aria-hidden="true">
+         DESCRIPTION
+      </label>
+    </div>
+    <div class="back">
+      <p>A simple quiz game meant to demonstrate my ability in Object-Oriented Programming in JavaScript.
+         Heavy focus on CSS animations to make it interactive and transition smoothly after questions.
+      </p> 
+      <label for="card4" class="button return" aria-hidden="true">
+        <i class="fas fa-arrow-left"></i>
+      </label>
+    </div>
+  </div>
+ </div>
+<!-- Card 5 -->
+ <div class="card">
+  <input type="checkbox" id="card5" class="more" aria-hidden="true">
+  <div class="content">
+    <div class="front">
+      <img src="/images/schoollist.png" alt="API Project">
+      <h1>School Supplies</h1>
+      <div class="icons">
+        <a><i class="fab fa-html5"></i></a>
+        <a><i class="fab fa-js"></i></a>
+        <a><i class="fab fa-css3"></i></a>
+        <a href="https://abby1120.github.io/SupplyLIst/" target="_blank"><i class="fas fa-desktop" title="LIVE"></i></a>
+        <a href="https://github.com/Abby1120/SupplyLIst" target="_blank"><i class="fas fa-file-code" title="CODE"></i></a>
+      </div>
+      <label for="card5" class="button" aria-hidden="true">
+         DESCRIPTION
+      </label>
+    </div>
+    <div class="back">
+      <p>This list is a simple app made using JavaScript. Teachers can create
+         a list, delete the list, delete individual items, drag and drop items
+         and search through the list using a keyUp search function. It was vanilla
+         JS but I added the DnD with jQuery.
+      </p> 
+      <label for="card5" class="button return" aria-hidden="true">
+        <i class="fas fa-arrow-left"></i>
+      </label>
+    </div>
+  </div>
+ </div>
+<!-- Card 6 -->
+ <div class="card">
+  <input type="checkbox" id="card6" class="more" aria-hidden="true">
+  <div class="content">
+    <div class="front">
+      <img src="/images/trailbreak.png" alt="API Project">
+      <h1>The Trail Break</h1>
+      <div class="icons">
+        <a><i class="fab fa-wordpress"></i></a>
+        <a><i class="fab fa-elementor"></i></a>
+        <a href="http://hotelschroon.atwebpages.com/"><i class="fas fa-desktop" title="LIVE"></i></a>
+      </div>
+      <label for="card6" class="button" aria-hidden="true">
+         DESCRIPTION
+      </label>
+    </div>
+    <div class="back">
+      <p>A fully responsive WordPress site utilizing the Astra Theme with Elementor
+         as a page builder and built locally on FlyWheel. This property reopens in the summer of 2020 
+         and I am waiting on professional photos from the owners to complete the site.
+      </p>
+      <label for="card6" class="button return" aria-hidden="true">
+        <i class="fas fa-arrow-left"></i>
+      </label>
+    </div>
+  </div>
+ </div>
+</div>
+</section> 
+
+<!-- About Me -->
+
+<section id="about">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>My name is Abigail and I am a front-end developer working to become
+       a full-stack developer. In 2016 I had an idea for a mobile application
+       that I wanted to build so I hit the tutorials and learned the basics
+       for development.<br><br>
+       "Functions are like recipes," states one of my coding
+       mentors. Thinking beyond that, I like to think of being a developer 
+       like being a Chef, we don't write the code for ourselves, we are writing it
+       to make the user's lives easier, to help them
+       solve a problem. I'm not making the food for myself I'm providing it for others.
+       This is my process for building the user interface.
+       <br><br>
+       The goal I have set for myself is to advance my knowledge to be able to work
+       with several development stacks. For now, I'm learning the MEAN stack and working
+       comfortably with ES6 features. 
+       Eliminating JavaScript where CSS can do the job, cleaning up CSS with SCSS, KISS principles
+       and working smarter not harder are what drives me to advance my knowledge in programming.<br><br>
+       I am actively seeking a Developer Role and would appreciate the opportunity to see
+       how I can contribute to your team. 
+    </p>
+  </div>
+ <!-- About Me Nav -->
+  <nav class="magellan">
+    <a href="#home" class="buttonnav">HOME</a>
+    <a href="#projects" class="buttonnav">PROJECTS</a>
+    <a href="#contact" class="buttonnav">CONTACT</a>
+    <a class="buttonnav" href="Web Resume.pdf" target="_blank">R&Eacute;SUM&Eacute;</a>
+  </nav>
+</section>
+
+<!-- Footer -->
+<footer class="contact-container" id="contact">
+  <div class="footer-icons">
+    <a class="footericon" href="http://www.linkedin.com/in/abigail-gulla" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a class="footericon" href="https://github.com/Abby1120" target="_blank"><i class="fab fa-github"></i></a>
+    <a class="footericon" href="https://www.freecodecamp.org/abigailg" target="_blank"><i class="fab fa-free-code-camp"></i></a>
+    <a class="footericon" href="https://codepen.io/abigailgulla" target="_blank"><i class="fab fa-codepen"></i></a>
+  </div>
+  <div class="email"><a href="mailto:abigailgulla@gmail.com">abigailgulla@gmail.com</a></div>
+  <div class="copyright">
+    <small>&copy; Copyright 2020 Abigail Gulla</small>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,448 @@
+$font1: 'Open Sans', sans-serif;
+$font2: 'Lora', serif;
+$light-blue: rgb(78, 151, 175);
+$green: rgb(67, 190, 78);
+$light-gray: rgb(206, 202, 195);
+$shadow: rgb(22, 24, 22);
+
+@mixin breakpoint($point) {
+  @if $point == papa-shark {
+    @media (min-width: 1800px) { @content; }
+  }
+  @else if $point == mama-shark {
+    @media (max-width: 900px) { @content; }
+  }
+  @else if $point == baby-shark {
+    @media (max-width: 600px)  { @content; }
+  }
+}
+
+@mixin flex-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 4%;
+  line-height: 2.5em;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    .buttonnav {
+      margin: 0 1%;
+      padding: 0 1.5em;
+      border: 1px solid rgba(238,232,255,0.57);
+      letter-spacing: 2px;
+      cursor: pointer; 
+    }
+    .buttonnav:hover {
+      background: white;
+      color: $green;
+      font-weight: bolder;
+    }
+}
+
+body {
+    margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, html {
+  height: 100%
+}
+
+// Header Parallax down to tablet size. On Mobile blurred background
+header {
+  @include flex-centered;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../images/staugustine.jpg");
+  @include breakpoint(mama-shark){
+    background-attachment: scroll;
+  }
+  @include breakpoint(baby-shark){
+    display: block;
+    filter: blur(2px);
+  }
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  .title {
+    @include flex-centered;
+    @include breakpoint(baby-shark){
+      display: none;
+    }
+    width: 100%;
+    font-family: $font2;
+    h1 {
+      margin: 0;
+      padding-left: 4%;
+      padding-right: 4%;
+      font-size: 3.5em;
+      font-weight: normal;
+      text-shadow: 2px 2px 3px $green;
+      text-align: center;
+      letter-spacing: 1px;
+      }
+    p {
+      margin: 0;
+      font-family: $font1;
+      font-size: 1.7em;
+      text-shadow: 1px 1px 5px $green;
+      text-align: center;
+      }
+    .nav-icons {
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 2em;
+      i {
+        padding: 7px;
+        color: white;
+      }
+      i:hover {
+        color: $green;
+      }
+    }
+    .magellan {
+      @include navigation;
+      @include breakpoint(baby-shark){
+        display: none;
+      }
+    }
+  }
+}
+
+// Mobile Only Title Circle
+.title-mobile {
+  @include breakpoint(baby-shark){
+    display: flex; 
+  }
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  margin: auto;
+  padding-top: 40%;
+  .circle {
+    height: 15em;
+    width: 15em;
+    background-color: $light-gray;
+    border-radius: 50%; 
+  }
+  .inner-circle {
+    z-index: 1;
+    height: 13em;
+    width: 13em; 
+    background-color: $light-gray;
+    border-radius: 50%;
+    margin: 6%;
+    border: 2px solid black;
+  }
+  h1 {
+    margin: 35% 0 2% 0;
+    color: $light-blue;
+    font-family: $font2;
+    text-shadow: 1px 1px black;
+    text-align: center;
+  }
+  h2{
+    margin: 0;
+    color: $green;
+    font-family: $font1;
+    text-shadow: 1px 1px black;
+    text-align: center;
+  } 
+}
+
+// Mobile Header Paragraph
+p {
+  font-family: $font2;
+  color: rgb(240, 235, 235);
+  font-size: 1.3em;
+  text-shadow: 2px 2px black;
+  text-align: center;
+}
+
+// Mobile Nav Fixed Bottom
+.icon-bar {
+  @include breakpoint(baby-shark){
+    display: flex;
+  }
+  display: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  bottom: 0;
+  background-color: black;
+  a {
+    margin-top: 2%;
+    padding-bottom: 1%;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    span {
+      display: block;
+      font-size: .5em;
+    }
+  }
+}
+
+// Projects Section
+#projects {
+  width: 100%;
+  background: $light-gray;
+  padding-bottom: 2%;
+  h2 {
+    margin: 0;
+    padding-top: 3%;
+    font-family: $font2;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px rgb(104, 104, 104);
+    text-align: center;
+  }
+}
+
+// Projects and Card Containers with 180 degree on y-axis
+.projects {
+  @include breakpoint(mama-shark){
+    width: 100%;
+  }
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  color: white;
+  .card {
+    @include breakpoint(papa-shark){
+      width: 490px;
+      height: 490px;
+    }
+    width: 300px;
+    height: 360px;
+    margin: 1em;
+    perspective: 1500px;
+    .content {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform .8s cubic-bezier(.75, 0, .85, 1);
+    }
+  }
+  .more {
+    display: none;
+    &:checked ~ .content {
+      transform: rotateY(180deg);
+    }
+  }
+}
+  
+// Card Position
+.front, .back {
+  position: absolute;
+  height: 100%;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+  
+// Front of Card Content
+.front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(69, 69, 70);
+  color: white;
+  box-shadow: 8px 8px 10px rgba(24, 27, 25, 0.726);
+  img {
+    width: 94%;
+    box-shadow: 4px 4px 5px $shadow;
+    transform: translateZ(35px) scale(.99);
+  }
+  h1 {
+    font-family: $font1;
+    letter-spacing: 1px;
+    transform: translateZ(50px) scale(0.99);
+    text-shadow: 7px 7px 5px $shadow;
+  }
+  .icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    font-size: 2em;
+    transform: translateZ(50px) scale(0.97);
+    text-shadow: 7px 7px 5px $shadow;
+    a {
+      padding: 0 3%;
+      color: white;
+      .fas:hover {
+        transition: .3s ease-in-out;
+        box-shadow: none;
+        text-shadow: none;
+      }
+    }
+  }
+}
+
+// Back of Card Content
+.back {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  background-color: #fff;
+  color: black;
+  box-shadow: 8px 8px 10px rgba(24, 27, 25, 0.726);
+  font-family: $font1; 
+  transform: rotateY(180deg);
+  p {
+    padding: 1% 8% 0 8%;
+    font-size: 1em;
+    text-align: justify;
+    transform: translateZ(50px) scale(0.99);
+  }
+}
+
+// Card Button Front and Back
+.button {
+  margin: 1.5em 0;
+  padding: .7em 1.2em;
+  border: 1px solid white;
+  box-shadow: 8px 8px 5px $shadow;
+  font-family: $font2;
+  text-shadow: 8px 8px 5px $shadow;
+  letter-spacing: 2px;
+  transition: .3s ease-in-out;
+  backface-visibility: hidden;
+  cursor: pointer;
+  transform: translateZ(40px) scale(0.95);
+    &:hover {
+      background-color: white;
+      color: black;
+      box-shadow: none;
+      text-shadow: none;
+    }
+    &.return { 
+      margin: 0 30% 6% 30%;
+      border: none;
+      color: $light-blue;
+      box-shadow: 4px 4px 3px $shadow;
+      text-shadow: none;
+      text-align: center;
+      transform: translateZ(50px) scale(0.94);
+      &:hover {
+        border: none;
+        color: $green;
+        box-shadow: none;
+      }
+    }
+}
+
+
+// About Me
+#about {
+  @include breakpoint(baby-shark){
+    background-attachment: scroll;
+  }
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url("../images/taiwaneast.jpg");
+  // height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .container {
+    @include breakpoint(baby-shark){
+      width: 94%;
+      padding: 3% 0 2% 3%;
+      text-align: center;
+    }
+    width: 60%;
+    padding: 3% 0 4% 8%;
+    color: white;
+    line-height: 1.4em;
+  }
+  h2 {
+    font-family: $font2;
+    font-size: 2.2em;
+    text-shadow: 2px 2px 1px black;
+    letter-spacing: 1px;
+  }
+  p {
+    @include breakpoint(baby-shark){
+      text-align: center;
+    }
+    font-family: $font1;
+    font-size: 1.2em;
+    text-shadow: 1px 1px black;
+    text-align: left;
+  }
+  .magellan {
+    @include navigation;
+    @include breakpoint(baby-shark){
+      display: none;
+    }
+    margin-top: 0;
+    padding-bottom: 4%;
+    .buttonnav:hover {
+      color: $light-blue;
+    }
+  }
+}
+
+// Footer & Contact Info
+footer {
+  @include flex-centered;
+  width: 100%;
+  padding: 2% 0;
+  background: black;
+  color: white;
+  line-height: 2.2em;
+  .footer-icons {
+    display: flex;
+    font-size: 2em;
+    a {
+      padding-left: 14px;
+      padding-right: 14px;
+      color: white;
+    }
+    i:hover {
+      color: $light-blue;
+    }
+  } 
+  .email a {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    &:hover {
+      color: $light-blue;
+    }
+  }
+  .copyright {
+    color: gray;
+  }
+}
+  
