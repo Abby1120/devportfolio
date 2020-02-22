@@ -196,7 +196,7 @@ header .title .magellan .buttonnav:hover {
 }
 
 .title-mobile h1 {
-  margin: 35% 0 2% 0;
+  margin: 35% 1% 2% 1%;
   color: #4e97af;
   font-family: "Lora", serif;
   text-shadow: 1px 1px black;
@@ -430,9 +430,8 @@ header .title .magellan .buttonnav:hover {
 }
 
 .back p {
-  padding: 1% 8% 0 8%;
-  font-size: 1em;
-  text-align: justify;
+  padding: 1% 5% 0 5%;
+  font-size: .9em;
   -webkit-transform: translateZ(50px) scale(0.99);
           transform: translateZ(50px) scale(0.99);
 }

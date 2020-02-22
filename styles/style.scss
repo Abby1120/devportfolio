@@ -154,7 +154,7 @@ header {
     border: 2px solid black;
   }
   h1 {
-    margin: 35% 0 2% 0;
+    margin: 35% 1% 2% 1%;
     color: $light-blue;
     font-family: $font2;
     text-shadow: 1px 1px black;
@@ -320,9 +320,8 @@ header {
   font-family: $font1;
   transform: rotateY(180deg);
   p {
-    padding: 1% 8% 0 8%;
-    font-size: 1em;
-    text-align: justify;
+    padding: 1% 5% 0 5%;
+    font-size: .9em;
     transform: translateZ(50px) scale(0.99);
   }
 }
